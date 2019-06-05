@@ -201,6 +201,8 @@ export class AlSessionInstance
     this.sessionData.acting = account;
     ALClient.defaultAccountId = account.id;
 
+    ALClient.defaultAccountId = account.id;
+
     if ( actingAccountChanged ) {
       this.resolutionGuard.rescind();
       this.notifyStream.trigger( new AlActingAccountChangedEvent( this.sessionData.acting, this ) );
